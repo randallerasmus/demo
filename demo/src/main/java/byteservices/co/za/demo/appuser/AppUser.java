@@ -14,21 +14,20 @@ import java.util.Collection;
 import java.util.Collections;
 
 // This class allows the user after he is registered to access certain endpoints
-
+// specify that this is a table in our database
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
-
-// specify that this is a table in our database
 @Entity
 public class AppUser implements UserDetails {
 
-    @Id
+
     @SequenceGenerator(name = "student_response",
                        sequenceName = "student_sequence",
                        allocationSize = 1
     )
+    @Id
     @GeneratedValue (
             strategy = GenerationType.SEQUENCE,
             generator = "student_response"
@@ -43,6 +42,8 @@ public class AppUser implements UserDetails {
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
 
+    // this is set to default to enabled the user
+    // once email is verified
     private Boolean locked = false;
     private Boolean enabled = false;
 
