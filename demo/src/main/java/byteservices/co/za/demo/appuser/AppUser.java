@@ -22,7 +22,7 @@ import java.util.Collections;
 @Entity
 public class AppUser implements UserDetails {
 
-
+// this is how the database will be structured
     @SequenceGenerator(name = "student_response",
                        sequenceName = "student_sequence",
                        allocationSize = 1
