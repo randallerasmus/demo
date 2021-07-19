@@ -45,7 +45,9 @@ public class AppUser implements UserDetails {
     // this is set to default to enabled the user
     // once email is verified
     private Boolean locked = false;
-    private Boolean enabled = false;
+    // set this as true to continue with the application
+    // todo: need to get the mail sorted
+    private Boolean enabled = true;
 
     public AppUser(String firstName,
                    String lastName,
