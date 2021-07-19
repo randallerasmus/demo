@@ -3,7 +3,7 @@ package byteservices.co.za.demo.registration;
 import byteservices.co.za.demo.appuser.AppUser;
 import byteservices.co.za.demo.appuser.AppUserRole;
 import byteservices.co.za.demo.appuser.AppUserService;
-import byteservices.co.za.demo.email.EmailSender;
+//import byteservices.co.za.demo.email.EmailSender;
 import byteservices.co.za.demo.registration.token.ConfirmationToken;
 import byteservices.co.za.demo.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ public class RegistrationService {
     private final AppUserService appUserService;
     private final EmailValidator emailValidator;
     private final ConfirmationTokenService confirmationTokenService;
-    private final EmailSender emailSender;
+//    private final EmailSender emailSender;
 
     public String register(RegistrationRequest request) {
 
@@ -42,7 +42,7 @@ public class RegistrationService {
        );
        String link = "localhost:8080/api/v1/registration/confirm?token" + token;
        //this is the html email
-       emailSender.send(request.getEmail(),buildEmail(request.getFirstName(),link));
+//       emailSender.send(request.getEmail(),buildEmail(request.getFirstName(),link));
        return token;
     }
 
