@@ -10,7 +10,7 @@ public class EmailValidator implements Predicate<String> {
 
     @Override
     public boolean test(String s) {
-//        TODO:Regex to validate email
+//        TODO:Regex to validate email and allow the user into the system
 
         return true;
     }
