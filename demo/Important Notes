@@ -10,3 +10,5 @@ INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 
+Everything works --> if you want to see admin users you would have to update the auth controller for admin ROLE_ADMIN
+
