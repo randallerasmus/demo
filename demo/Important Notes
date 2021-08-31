@@ -1,0 +1,12 @@
+1. What i had to do was create the testdb inside of mysql workbench or you could create it via
+   the command line.
+2. Also I had to update the application properties to allow for public key retrieval.
+
+3. I also had to add my computers own root username and password.
+
+4. I had to insert the roles because it was complaining about a role that is not found. I had to manually uplaod these
+roles to the specified table
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+
